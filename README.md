@@ -16,8 +16,8 @@ pops of notifications to connect to MetaMask; returns connected account
 ### bindChanges(data, callback)
 data: {accounts: true, chain: true}
 Pass in a boolean for accounts or chain to track wallet changes for accounts, and chain respectively.
-If account changed: calls callback('Account');
-If chain changed: calls callback('Network');
+If account changed: calls callback({chain: 'Account', account: accounts[0]});
+If chain changed: calls callback({chain: 'Network', chain: chainId});
 
 
 ## Code Example
@@ -32,7 +32,7 @@ const handleError = (err) => {
 
 // allow Eth Mainnet, Polygon, Aave C-chain
 const allowedNetworks = [1, 137, 43144]
-const Metamask = new AmurseConnectMetamask(allowedNetworks)
+const Metamask = new AmurseConnectMetamask({allowedNetworks: allowedNetworks})
 MetaMask.connect(handleError)
 
 const changesCallback = (identifier) => {

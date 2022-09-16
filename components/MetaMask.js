@@ -46,13 +46,13 @@ class AmurseConnectMetamask {
     if (!ethereum) return;
     if (accounts) {
       ethereum.on('accountsChanged', (accounts) => {
-        callback && callback('Account')
+        callback && callback({change: 'Account', account: accounts[0]})
       });
     }
 
     if (chain) {
       ethereum.on('chainChanged', (chainId) => {
-        callback && callback('Network')
+        callback && callback({change: 'Network', chain: chainId})
       });
     }
   }
