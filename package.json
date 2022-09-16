@@ -1,0 +1,14 @@
+{
+  "name": "@amurse/connect_sdk",
+  "version": "1.0.2",
+  "description": "connect wallet funcationality for amurse",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amritpal Chera (cheraamritpal@gmail.com)",
+  "license": "ISC",
+  "dependencies": {
+    "web3": "^1.7.5"
+  }
+}
