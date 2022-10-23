@@ -1,6 +1,6 @@
 {
   "name": "@amurse/connect_sdk",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "connect wallet funcationality for amurse",
   "main": "index.js",
   "scripts": {
