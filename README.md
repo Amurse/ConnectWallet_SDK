@@ -1,3 +1,5 @@
+# ConnectWallet_SDK
+
 Amurse SDK for connecting wallets for different wallets
 
 ### MetaMask
@@ -6,6 +8,8 @@ Pass in a custom chain number array for allowed chains.
 
 #### validateAddress(address)
 validates any ETH address; returns boolean
+
+
 
 #### connectSilently(errorHandler)
 if the wallet is already connected to url; returns connected account
@@ -44,12 +48,3 @@ const changesCallback = (identifier) => {
 // callback upon accounts are changed
 Metamask.bindChanges({accounts: true}, changesCallback)
 ```
-
-
-
-
-
-
-
-
-# ConnectWallet_SDK
